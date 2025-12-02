@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPSRL: Open-Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .authors {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .center {
+            text-align: center;
+        }
+        .img-box img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+        .code-box {
+            background: #f7f7f7;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+<h1>SPSRL</h1>
+<h2>Open-Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning</h2>
+
+<p class="authors">
+    <strong>Mingzhu Ping</strong>, 
+    <strong>Jinpeng Ye</strong>, 
+    <strong>Sijia Cui</strong>, 
+    <strong>Di Zhou</strong>, 
+    <strong>Pengpeng Xu</strong>, 
+    <strong>Yan Tian</strong>
+</p>
+
+<div class="section">
+    <h2>Abstract</h2>
+    <p>
+        Open-vocabulary semantic segmentation (OVSS) conducts pixel-level classification through textual 
+        prompt-driven multi-modal semantic alignment. However, current approaches struggle to maintain 
+        their strength when significant visual degradations occur. Although depth information can be 
+        generated and fused with visual features, fusion method with both effectiveness and efficiency 
+        is difficult to design because of the semantic gap between different modalities. In addition, 
+        the disparity between base category training and open-vocabulary inference complicates latent 
+        unseen category modeling.
+    </p>
+    <p>
+        Motivated by the principles of orthogonal decomposition and optimal transport assignment, we
+        design <strong>SPSRL (Spatial Prior and Semantic Relation Learning)</strong> to simultaneously improve the 
+        efficiency and robustness of OVSS, where Visual-Spatial Knowledge Fusion (VSKF) segregates 
+        modality-specific features into dual-view vectors to capture distinctive information, and 
+        Semantics Relation Update (SRU) discovers latent semantic embeddings in high-dimensional 
+        multi-modality features. Experimental results on multiple datasets indicate that our approach 
+        improves the mean intersection over union (mIoU) by a margin of <strong>2.6–3.0%</strong> compared to the 
+        prevailing approaches.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Method Overview</h2>
+    <p>Below is the framework of the proposed SPSRL (replace with your actual image file):</p>
+    <div class="center img-box">
+        <img src="assets/method.png" alt="Method Framework Placeholder">
+    </div>
+</div>
+
+<div class="section">
+    <h2>Results</h2>
+    <p>You can upload your result figure later and replace the placeholder below:</p>
+    <div class="center img-box">
+        <img src="assets/results_placeholder.png" alt="Results Placeholder">
+    </div>
+</div>
+
+<div class="section">
+    <h2>Citation</h2>
+    <div class="code-box">
+@article{SPSRL2025,<br>
+&nbsp;&nbsp;title={SPSRL: Open-Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning},<br>
+&nbsp;&nbsp;author={Mingzhu Ping and Jinpeng Ye and Sijia Cui and Di Zhou and Pengpeng Xu and Yan Tian},<br>
+&nbsp;&nbsp;year={2025}<br>
+}
+    </div>
+</div>
+
+<div class="section center">
+    <p>© 2025 SPSRL Project</p>
+</div>
+
+</body>
+</html>
