@@ -2,119 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SPSRL: Open-Vocabulary Semantic Segmentation</title>
+    <title>SPSRL — Zhejiang Gongshang University</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            max-width: 960px;
             margin: auto;
             padding: 20px;
+            color: #222;
+            background-color: #ffffff;
             line-height: 1.6;
-            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 5px;
+            font-size: 36px;
+            font-weight: 700;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 24px;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
             color: #333;
         }
-        h1, h2 {
-            text-align: center;
-            color: #2c3e50;
-        }
-        /* 作者名字底色灰色 */
-        .authors {
+        .subtitle {
             text-align: center;
             font-size: 18px;
+            color: #555;
             margin-bottom: 30px;
-            background-color: #999999; /* 灰色 */
-            padding: 10px;
-            border-radius: 6px;
-            color: #fff; /* 文字白色更明显 */
+        }
+        .authors {
+            text-align: center;
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 6px;
+        }
+        .affiliation {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 30px;
         }
         .section {
-            margin-top: 40px;
+            margin-top: 30px;
         }
-        .center {
+        .img-box {
             text-align: center;
+            margin: 20px 0;
         }
         .img-box img {
-            max-width: 80%;
-            border-radius: 6px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            max-width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        /* Citation 背景灰色 */
         .code-box {
-            background: #999999; /* 灰色 */
+            background-color: #f5f5f5;
             padding: 12px;
-            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
             font-family: monospace;
             overflow-x: auto;
-            color: #fff; /* 文字白色 */
+            color: #333;
         }
         p {
             text-align: justify;
         }
-        a {
-            color: #1e88e5;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
         footer {
             text-align: center;
-            margin-top: 50px;
-            color: #777;
+            margin-top: 60px;
             font-size: 14px;
+            color: #999;
         }
     </style>
 </head>
 <body>
 
 <h1>SPSRL</h1>
-<h2>Open-Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning</h2>
+<div class="subtitle">Open‑Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning</div>
 
-<p class="authors">
-    <strong>Mingzhu Ping</strong>, 
-    <strong>Jinpeng Ye</strong>, 
-    <strong>Sijia Cui</strong>, 
-    <strong>Di Zhou</strong>, 
-    <strong>Pengpeng Xu</strong>, 
-    <strong>Yan Tian</strong>
-</p>
+<div class="authors">
+    Mingzhu Ping, Jinpeng Ye, Sijia Cui, Di Zhou, Pengpeng Xu, Yan Tian  
+</div>
+<div class="affiliation">
+    Zhejiang Gongshang University  
+</div>
 
 <div class="section">
     <h2>Abstract</h2>
     <p>
-        Open-vocabulary semantic segmentation (OVSS) conducts pixel-level classification through textual 
-        prompt-driven multi-modal semantic alignment. However, current approaches struggle to maintain 
-        their strength when significant visual degradations occur. Although depth information can be 
-        generated and fused with visual features, fusion method with both effectiveness and efficiency 
-        is difficult to design because of the semantic gap between different modalities. In addition, 
-        the disparity between base category training and open-vocabulary inference complicates latent 
-        unseen category modeling.
+        Open‑vocabulary semantic segmentation (OVSS) conducts pixel-level classification through textual prompt‑driven multi-modal semantic alignment. However, current approaches struggle to maintain their strength when significant visual degradations occur. Although depth information can be generated and fused with visual features, designing a fusion method that is both effective and efficient remains difficult due to the semantic gap between modalities. In addition, the disparity between base category training and open‑vocabulary inference complicates latent unseen category modeling.
     </p>
     <p>
-        Motivated by the principles of orthogonal decomposition and optimal transport assignment, we
-        design <strong>SPSRL (Spatial Prior and Semantic Relation Learning)</strong> to simultaneously improve the 
-        efficiency and robustness of OVSS, where Visual-Spatial Knowledge Fusion (VSKF) segregates 
-        modality-specific features into dual-view vectors to capture distinctive information, and 
-        Semantics Relation Update (SRU) discovers latent semantic embeddings in high-dimensional 
-        multi-modality features. Experimental results on multiple datasets indicate that our approach 
-        improves the mean intersection over union (mIoU) by a margin of <strong>2.6–3.0%</strong> compared to the 
-        prevailing approaches.
+        Motivated by the principles of orthogonal decomposition and optimal transport assignment, we design <strong>SPSRL (Spatial Prior and Semantic Relation Learning)</strong>, which simultaneously improves efficiency and robustness of OVSS. Specifically, the Visual‑Spatial Knowledge Fusion (VSKF) segregates modality‑specific features into dual‑view vectors to capture distinctive information, and the Semantic Relation Update (SRU) discovers latent semantic embeddings in high‑dimensional multi‑modality feature space. Experimental results on multiple datasets show that SPSRL improves mean Intersection over Union (mIoU) by ~2.6–3.0% compared to existing approaches.
     </p>
 </div>
 
 <div class="section">
     <h2>Method Overview</h2>
-    <p>Below is the framework of the proposed SPSRL:</p>
-    <div class="center img-box">
+    <p style="text-align:center;">Framework of SPSRL</p>
+    <div class="img-box">
         <img src="SPSRL/assets/framework.jpg" alt="Method Framework">
     </div>
-</div>
+</div>SPSRL/
 
 <div class="section">
     <h2>Results</h2>
-    <p>You can upload your result figure and replace the placeholder below:</p>
-    <div class="center img-box">
+    <p style="text-align:center;">(Results placeholder — upload result image in <code>assets/</code>)</p>
+    <div class="img-box">
         <img src="assets/results_placeholder.png" alt="Results Placeholder">
     </div>
 </div>
@@ -123,7 +121,7 @@
     <h2>Citation</h2>
     <div class="code-box">
 @article{SPSRL2025,<br>
-&nbsp;&nbsp;title={SPSRL: Open-Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning},<br>
+&nbsp;&nbsp;title={SPSRL: Open‑Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning},<br>
 &nbsp;&nbsp;author={Mingzhu Ping and Jinpeng Ye and Sijia Cui and Di Zhou and Pengpeng Xu and Yan Tian},<br>
 &nbsp;&nbsp;year={2025}<br>
 }
@@ -131,7 +129,7 @@
 </div>
 
 <footer>
-    © 2025 SPSRL Project
+    &copy; 2025 SPSRL — Zhejiang Gongshang University
 </footer>
 
 </body>
