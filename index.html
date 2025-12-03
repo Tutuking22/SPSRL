@@ -2,82 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SPSRL — Zhejiang Gongshang University</title>
+    <title>SPSRL — Project Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            max-width: 960px;
+            font-family: Arial, sans-serif;
+            max-width: 900px;
             margin: auto;
             padding: 20px;
-            color: #222;
-            background-color: #ffffff;
             line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
         h1 {
             text-align: center;
             margin-bottom: 5px;
-            font-size: 36px;
-            font-weight: 700;
         }
         h2 {
             text-align: center;
             margin-top: 40px;
-            font-size: 24px;
-            font-weight: 600;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-            color: #333;
         }
-       .subtitle {
-    text-align: center;
-    font-size: 36px; 
-    font-weight: 700;
-    color: #2c3e50; 
-    margin-bottom: 30px;
-}
+        .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
         }
         .authors {
             text-align: center;
-            font-size: 16px;
-            color: #444;
-            margin-bottom: 6px;
-        }
-        .affiliation {
-            text-align: center;
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 30px;
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         .section {
             margin-top: 30px;
         }
-        .img-box {
+        .center {
             text-align: center;
-            margin: 20px 0;
         }
         .img-box img {
-            max-width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            max-width: 80%;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
         .code-box {
-            background-color: #f5f5f5;
+            background: #f7f7f7;
             padding: 12px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
+            border-radius: 6px;
             font-family: monospace;
-            overflow-x: auto;
-            color: #333;
         }
         p {
             text-align: justify;
         }
         footer {
             text-align: center;
-            margin-top: 60px;
+            margin-top: 50px;
+            color: #777;
             font-size: 14px;
-            color: #999;
         }
     </style>
 </head>
@@ -87,34 +67,40 @@
 <div class="subtitle">Open‑Vocabulary Semantic Segmentation with Spatial Prior and Semantic Relation Learning</div>
 
 <div class="authors">
-    Mingzhu Ping, Jinpeng Ye, Sijia Cui, Di Zhou, Pengpeng Xu, Yan Tian  
-</div>
-<div class="affiliation">
-    Zhejiang Gongshang University  
+  Mingzhu Ping, Jinpeng Ye, Sijia Cui, Di Zhou, Pengpeng Xu, Yan Tian  
 </div>
 
 <div class="section">
     <h2>Abstract</h2>
     <p>
-        Open‑vocabulary semantic segmentation (OVSS) conducts pixel-level classification through textual prompt‑driven multi-modal semantic alignment. However, current approaches struggle to maintain their strength when significant visual degradations occur. Although depth information can be generated and fused with visual features, designing a fusion method that is both effective and efficient remains difficult due to the semantic gap between modalities. In addition, the disparity between base category training and open‑vocabulary inference complicates latent unseen category modeling.
+        Open‑vocabulary semantic segmentation (OVSS) conducts pixel-level classification through textual 
+        prompt‑driven multi‑modal semantic alignment. However, current approaches struggle to maintain their 
+        strength when significant visual degradations occur. Although depth information can be generated and 
+        fused with visual features, designing a fusion method that is both effective and efficient remains 
+        difficult due to the semantic gap between different modalities. In addition, the disparity between base 
+        category training and open‑vocabulary inference complicates latent unseen category modeling.
     </p>
     <p>
-        Motivated by the principles of orthogonal decomposition and optimal transport assignment, we design <strong>SPSRL (Spatial Prior and Semantic Relation Learning)</strong>, which simultaneously improves efficiency and robustness of OVSS. Specifically, the Visual‑Spatial Knowledge Fusion (VSKF) segregates modality‑specific features into dual‑view vectors to capture distinctive information, and the Semantic Relation Update (SRU) discovers latent semantic embeddings in high‑dimensional multi‑modality feature space. Experimental results on multiple datasets show that SPSRL improves mean Intersection over Union (mIoU) by ~2.6–3.0% compared to existing approaches.
+        Motivated by the principles of orthogonal decomposition and optimal transport assignment, we design 
+        <strong>SPSRL (Spatial Prior and Semantic Relation Learning)</strong>, which simultaneously improves 
+        efficiency and robustness of OVSS. Specifically, the Visual‑Spatial Knowledge Fusion (VSKF) segregates 
+        modality‑specific features into dual‑view vectors to capture distinctive information, and the Semantic 
+        Relation Update (SRU) discovers latent semantic embeddings in high‑dimensional multi‑modality feature space. 
+        Experimental results on multiple datasets show that SPSRL improves mean Intersection over Union (mIoU) by 
+        ~2.6–3.0% compared to existing approaches.
     </p>
 </div>
 
 <div class="section">
     <h2>Method Overview</h2>
-    <p style="text-align:center;">Framework of SPSRL</p>
-    <div class="img-box">
-        <img src="SPSRL/assets/framework.jpg" alt="Method Framework">
+    <div class="center img-box">
+        <img src="assets/framework.jpg" alt="Method Framework">
     </div>
 </div>
-    
+
 <div class="section">
     <h2>Results</h2>
-    <p style="text-align:center;">(Results placeholder — upload result image in <code>assets/</code>)</p>
-    <div class="img-box">
+    <div class="center img-box">
         <img src="assets/results_placeholder.png" alt="Results Placeholder">
     </div>
 </div>
@@ -131,7 +117,7 @@
 </div>
 
 <footer>
-    &copy; 2025 SPSRL — Zhejiang Gongshang University
+    &copy; 2025 SPSRL Project
 </footer>
 
 </body>
